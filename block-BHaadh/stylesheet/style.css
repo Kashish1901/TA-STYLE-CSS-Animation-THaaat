@@ -53,12 +53,36 @@ table {
 }
 
 body {
-  background-color: lightgray;
+  background-color: rgb(217, 165, 165);
   padding: 3rem;
+  text-align: center;
 }
 
 html {
   font-size: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.twoD-cube {
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  padding: 2rem;
+  margin-top: 4rem;
+  border: 2px dotted black;
+}
+
+.threeD-cube {
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  padding: 2rem;
+  margin-top: 4rem;
+  border: 2px dotted black;
 }
 
 h1 {
@@ -67,17 +91,51 @@ h1 {
   font-weight: 700;
 }
 
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cube {
+  position: relative;
+  left: 120px;
+  top: 120px;
+  animation: twoDanimation 2s linear 0 infinity;
+}
+
+.side {
+  height: 105px;
+  position: absolute;
+  width: 105px;
+}
+
+.top-2d {
+  background-color: gray;
+  transform: rotate(-45deg) skew(15deg, 15deg);
+}
+
+.left-2d {
+  background-color: lightgray;
+  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+
+.right-2d {
+  background-color: darkgray;
+  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+.cube-3D {
   animation: rotate 7000ms linear infinite;
   bottom: 0;
-  height: 100px;
-  left: 0;
+  height: 105px;
+  left: 950px;
   margin: auto;
   position: absolute;
   transform-style: preserve-3d;
   right: 0;
-  top: 0;
-  width: 100px;
+  top: 50px;
+  width: 105px;
 }
 
 @keyframes rotate {
